@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1o Exemplo Javascript</title>
+        <!-- <script src="scriptExterno.js"-->
+            
+        <!--script type="text/javascript">
+            
+            function exibirMsg(){
+              alert("Hello World");
+            }
+            
+        </script-->
+        
+        <noscript>
+            <style>
+               background-color: red;
+               color: white;
+            </style>
+        </noscript>
+    
+    </head>
+    
+    <body id="minhaPagina">
+        
+        <noscript>
+            Para usar esse site corretamente, habilite o JavaScript em seu navegador.
+        </noscript>
+        
+        <h1 id="titulo">Introdução ao Javascript</h1>
+        
+        <input type="button" value="Mudar Cor" onclick="mudarCor();"
+        <!-- input type="button" value="Clique Aqui"-->
+        
+       <script type="text/javascript">
+           function mudarCor() {
+                      document.getElementById("minhaPagina").style.backgroundColor = "pink";
+           }
+        </script>
+    </body>
+</html>

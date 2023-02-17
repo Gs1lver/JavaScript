@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da página</title>
+    
+    <script>
+        var variavel = 'Texto';
+        console.log("variavel = " + variavel);
+        console.log(typeof variavel);
+       
+       variavel = 10;
+       console.log("variavel = " + variavel);
+       console.log(typeof variavel);
+       
+       variavel = true;
+       console.log("variavel = " + variavel);
+       console.log(typeof variavel);
+       
+       console.log("agua bate em pedra dura: \"tanto fura até que bate\"");
+       
+       console.log ('hello world : "programmed to work and not to feel"');
+       
+       console.log ('not even sure if this\' real')
+      
+      //escopo de variavel
+      
+      var nome = 'Louie';
+      
+      if (nome != null)  {
+          var sobrenome = 'Zong';
+          console.log(nome + '' + sobrenome);
+      }
+      
+      console.log (nome + '' + sobrenome);
+      
+      /* escopo de let (mais restrito) */
+      let colegio = 'Cotil';
+      
+      if(colegio != null){
+          let universidade = 'Unicamp';
+          console.log(colegio + '' + universidade);
+      }
+      //console.log (colegio + '' + universidade);
+      
+      // const
+      const IDADE = 18;
+      //IDADE = 21 (não se pode alterar valor de constante depois de ja ter sido declarado)
+      console.log (IDADE);
+      
+      //const PI; 
+   </script>
+</head>
+<body>
+    
+</body>
+</html>
