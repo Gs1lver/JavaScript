@@ -62,6 +62,113 @@
         console.log("----------------");
         console.log(typeof nomes); //retorna object
 
+        //concatenando arrays - juntando em um só 
+        var tecnico = ["LP", "BD", "DAW"];
+        var medio = ["Matemática","Português","Biologia"];
+        var formacaoCompleta = tecnico.concat(medio);
+        
+        console.log("------Arrays concatenados------");
+        console.log(formacaoCompleta);
+        
+        //gerando String com elementos do array "tecnico"
+        var stringResultante = tecnico.join("-");
+        console.log("------String resultante------");
+         
+         //copiando um pedaço do array
+         var formacaoBasica = medio.slice(1,2); // a partir da posicao 1, conte 2
+        console.log("------formacaoBasica = " + formacaoBasica);
+        
+        //invertendo os elementos do array
+        tecnico.reverse();
+        console.log("-----Array invertido-----");
+        console.log (tecnico);
+        
+        //sort - organiza o array pelo unicode e modifica o array original
+        console.log("------Sort------");
+        const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+        instrumentos.sort();
+        console.log(instrumentos);
+        
+        const idades = [32, 21, 33, 43, 1, 12, 8];
+        idades.sort();
+        console.log(idades);
+        
+        //map - nos permite percorrer um veotr e obter um novo array cujos itens sãoo resultado de uma funçãode callback que recebe como parâmetro cada item orginal. Funciona da mesma forma que o forEach(), porém ao invésde retornar undefined, retorna um nova array com valores  atualizados de acordocom o return de cada iteração. se o objetivo for modificar os valores doa rray atual, sempre utilize o map.
+        
+        const lista = [1,2,3,4,5,6];
+        
+        //item = valor de cada posição
+        const novaLista = lista.map(function(item){
+                return item * 5;
+            });
+            
+        console.log("Resultado Map:" + novaLista);
+
+
+        //item = valor do item, indice = indice do array
+        const novaLista2 = lista.map(function(item, index){
+          return item + index;
+        });
+       console.log("Resultado map2: " + novaLista2);
+        
+        //com arrow function
+        const carros = ['Ford', 'Fiat', 'Honda'];
+        
+        /*const newCarros = carros.map(function(item){
+            return 'Carro' + item;
+        });*/
+        
+        const newCarros = carros.map(
+            (item) => {
+                return 'Carro ' + item;
+            }
+        );
+        
+        console.log(carros); //['Ford', 'Fiat', 'Honda']
+        console.log(newCarros); // ['Carro Ford', 'Carro Fiat', 'Carro Honda']
+        
+        //Reduce - "reduz" os itens de um vetor a um valor unico. Um valor especial existe nessa função de callback, ele é chamado de acumulador (retorno da iteração anterior)
+        
+        const aulas = [10, 23, 30];
+        
+        const total1= aulas.reduce((acumulador,atual) => {
+            return acumulador + atual;
+        });
+        
+        console.log(total1); //65
+        
+        const total2 = aulas.reduce((acc, cur) => acc + cur, 100); // accumulator e current
+        console.log(total2);//165
+        
+        //findIndex - localiza o indice de um item na lista
+        let frutas = ['Banana', 'Pera', 'Uva', 'Maçã'];
+        const buscaUva = frutas.findIndex((fruta) => {
+            return fruta === 'Uva';
+        }); //2
+        console.log("Posição Uva: " + buscaUva);
+        
+        //find -localiza um item na lista
+        let numeros = [6,43,22,88,10,29];
+        let buscaMaior45 = numeros.find(x => x > 45);
+        console.log(buscaMaior45);
+        
+        //include - verifica se tem algo dentro de um array
+        let nomesTeste = ['Matheus', 'Lucas', 'João'];
+        console.log(nomesTeste.includes('Simone')); //retorna false
+        
+        //some - se pelo menos um return da iteração for verdadeiro, ele retorna true
+        if (nomesTeste.some(nome => nome === 'Lucas'));
+        
+        //every verifica se todos os itens de um array ou de um obj atendem a uma condição/valor.
+        numeros = [6,43,22,2,101,29];
+        const maiorQue3 = numeros.every(x => x > 3); //true - verificar    
+        console.log(maiorQue3); 
+        
+        //filter - retorna um array com a listra de valores que durante s sua iteração  retornaram  um valor verdadeiro 
+        numeros = [6,43,22,88,101,29];
+        buscaMaior45 = numeros.filter(x => x >45);
+        console.log(buscaMaior45);[88,101]
+
     </script>
 </head>
 <body>
