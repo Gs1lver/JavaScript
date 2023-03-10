@@ -12,7 +12,12 @@
         var objetoVazio = {};
         console.log("objeto vazio: " + objetoVazio);
 
+        /*duas variaveis para definir dados de um curso
+        var siglaDisciplina = "DAW";
+        var nomeDisciplina = "Desenvolvimento Aplicações Web"
+        */
 
+        //ou um objeto com atributos para definir uma disciplina
         var disciplina = {
             sigla: "DAW",
             nome: "Desenvolvimento de Aplicações Web"
@@ -22,6 +27,10 @@
         console.log("disciplina.sigla: "+ disciplina.sigla);
         console.log("disciplina.nome: " + disciplina.nome);
 
+        /*console.log("disciplina.sigla: "+ disciplina.['sigla']);
+        console.log("disciplina.nome: " + disciplina['nome']);
+        */
+
         //criado objetos com create
         var curso = new Object();
         curso.nome = 'Javascript Básico';
@@ -29,9 +38,77 @@
 
         //curso['nome'] = 'Javascript Básico';
         //curso['responsavel'] = 'Fulano da Silva';
+
+        //um objeto pode se relacionar com outros objetos atraves de propriedades. Observe o codigo abaixo
+        var curso = {
+            sigla: "TI",
+            nome: "Técnico em Informática",
+            disciplinas: [
+                {
+                    sigla:"DS",
+                    nome: "Desemvolvimento de Sistemas"
+                },
+                {
+                    sigla: "LP",
+                    nome:"Lógica de Programação"
+                },
+            ]
+        };
+
+        console.log(curso.sigla);
+        console.log(curso.nome);
+
+        console.log(curso.disciplinas); // mostra todas as disciplinas
+
+        console.log(curso.disciplinas[0].sigla); //mostra a sigla DS
+        console.log(curso.disciplinas[1 ].nome); //mostra o nome Logica de Programação
+
+        //EXTRAS
+        //alterando o valor de uma propriedade
+
+        var curso1 = {
+            sigla: "TI",
+            nome: "Técnico em Informática"
+        };
+
+        curso1.sigla = "SI";
+        curso1.nome = "Sistema de informação";
+
+        console.log(curso1.sigla);
+        console.log(curso1.nome);
+
+        //Spread Operator
+        var pessoa = {
+            nome: "Simone",
+            idade: 20,
+            cargo:"Professora"
+        };
+
+        console.log(pessoa);
+
+        var novaPessoa = {
+            ...pessoa, // copia objeto ja antes feito e seus atributos
+            anoAtual: 2020,
+            cidade:"Limeira"
+        };
+
+        console.log(novaPessoa);
+
+        function cadastraPessoa(info){
+            let novosDados = {
+                ...info,
+                cargo: "Professora",
+                status: "atuando",
+                codigo: 1234
+            };
+            console.log(novosDados);
+        }
+
+        cadastraPessoa({nome:"Simoone", sobrenome: "Dapólito", anoInicio: 2020});
+
     </script>
 </head>
 <body>
-    
+    Criação de Objetos
 </body>
 </html>

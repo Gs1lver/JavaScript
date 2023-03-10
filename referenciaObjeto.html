@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //alterando o valor de uma propriedade
+
+        var curso = {
+            sigla:"TI",
+            nome:"Técnico em Informatica"
+        };
+
+        //copiando ma referencia
+        //var x = {...curso}; //cópia
+
+        var x = curso; //referencia, ponteiro
+        x.sigla = "SI";
+        x.nome = "Sistemas de Iformação";
+
+        //imprime SI
+        console.log(curso.sigla);
+        console.log(x.sigla);
+
+        //Sistemas de Informação
+        console.log(curso.nome);
+        console.log(x.nome);
+    </script>
+</head>
+<body>
+    Referencia a Objetos
+</body>
+</html>
