@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type ="text/javascript">
+        var alunoObj = {
+            ra: 12345,
+            nome: 'Fulano'
+        };
+
+
+        var alunoStr = JSON.stringify(alunoObj); //converte o obj JS em JSON (texto)
+        console.log("Obj em JSON:" + alunoStr);
+
+        var novoAlunoObj = JSON.parse(alunoStr); //converte o JSON (texto) para um objeto JS
+        console.log("JSON em JS:" + novoAlunoObj.ra + novoAlunoObj.nome);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
