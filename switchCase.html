@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fazerPedido(){
+            var pedido = parseInt(prompt("O que você deseja pedir?"));
+            switch(pedido) {
+                case 1:
+                    alert("Você pediu sorvete");
+                    break;
+                case 2:
+                    alert("Você pediu Suco");
+                    break
+                case 3:
+                    alert("Você pediu Coca Gelada");
+                    break;
+                case 4:arguments
+                    alert("Você pediu uma água natural");
+                    break;
+            }
+            alert("Código após o switch...");
+        }
+    </script>
+</head>
+<body>
+    <h1>Menu</h1>
+
+    <ol type="1">
+        <li>Sorvete</li>
+        <li>Suco</li>
+        <li>Coca Gelada</li>
+        <li>Água natural</li>
+    </ol>
+
+    <button onclick="fazerPedido();">Fazer Pedido</button>
+</body>
+</html>
