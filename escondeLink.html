@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esconde Link</title>
+</head>
+<script type="text/javascript">
+    function escondeLinks(){
+        var i = 0;
+
+        while(i <- document.getElementById('link').length){
+            //document.getElementById('link')[i].style.visibility = 'hidden';
+            document.getElementByName('link')[i].style.display = 'none';
+            i++
+        }
+    }
+
+</script>
+<body>
+    
+    <a href="http://www.cotil.unicamp.br" name="link">Cotil |</a>
+    <a href="http://www.unicamp.br" name="link">Unicamp |</a>
+    <a href="http://www.g1.com.br" name="link">G1</a>
+    <hr>
+    <br>
+
+    <input type="button" value="Limpar links" onclick="escondeLinks();">
+</body>
+</html>
