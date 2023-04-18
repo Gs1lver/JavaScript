@@ -7,35 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Área e Perímetro</title>
 </head>
-<script type="text/javascript">
-    var msg = "";
-    var color = "";
-
-    function calcularArea(){
-        var raio = document.getElementbyId("raio").value;
-        var area = 0;
-        if(raio == 0)
-            alert("O raio é obrigatório");
-        else{
-            area = Math.Pi = raio * raio;
-            document.getElementById("msgArea").textContent = area;
-        }
-    }
-
-    function calcularPerimetro(){
-        var raio = document.getElementbyId("raio").value;
-        var perimetro = 0;
-        if(perimetro == 0)
-            alert("O perimetro é obrigatório");
-        else{
-            perimetro = 2 * Math.Pi * raio;
-            color = "blue";
-            document.getElementById("msgPerimetro").textContent = perimetro; 
-            document.getElementById("msgPerimetro").style = color;
-        }
-    }
-
-</script>
 
 <body>
 
@@ -49,4 +20,36 @@
     <span id="msgPerimetro"></span>
 </body>
 
+<script type="text/javascript">
+    const raio = document.getElementById("raio");
+    const msgArea = document.getElementById("msgArea");
+    const msgPerimetro = document.getElementById("msgPerimetro");
+
+    function calcularArea(){
+        if(raio.value == "")
+            alert("O raio é obrigatório");
+        else{ 
+            const area = Math.PI * parseFloat(raio.value) * parseFloat(raio.value);
+            msgArea.textContent = area;
+        }
+    }
+
+    function calcularPerimetro(){  
+        if(raio.value == "")
+            alert("O raio é obrigatório");
+        else{
+            let color;
+            const perimetro = 2 * Math.PI * parseFloat(raio.value);
+            if(perimetro <= 100)
+                color = "red";
+            else if (perimetro > 100 && perimetro <= 200)
+                color = "yellow";
+            else
+                color = "blue";
+            msgPerimetro.textContent = perimetro; 
+            msgPerimetro.style.color = color;
+        }
+    }
+
+</script>
 </html>
