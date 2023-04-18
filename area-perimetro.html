@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área e Perímetro</title>
+</head>
+<script type="text/javascript">
+    var msg = "";
+    var color = "";
+
+    function calcularArea(){
+        var raio = document.getElementbyId("raio").value;
+        var area = 0;
+        if(raio == 0)
+            alert("O raio é obrigatório");
+        else{
+            area = Math.Pi = raio * raio;
+            document.getElementById("msgArea").textContent = area;
+        }
+    }
+
+    function calcularPerimetro(){
+        var raio = document.getElementbyId("raio").value;
+        var perimetro = 0;
+        if(perimetro == 0)
+            alert("O perimetro é obrigatório");
+        else{
+            perimetro = 2 * Math.Pi * raio;
+            color = "blue";
+            document.getElementById("msgPerimetro").textContent = perimetro; 
+            document.getElementById("msgPerimetro").style = color;
+        }
+    }
+
+</script>
+
+<body>
+
+    <label for="raio">Raio:</label>
+    <input type="text" id="raio" name="raio"><br><br>
+    <input type="button" value="Área" onclick="calcularArea();">
+    <input type="button" value="Perímetro" onclick="calcularPerimetro();"><br><br>
+    <label for="msgArea">Área: </label>
+    <span id="msgArea"></span><br><br>
+    <label for="msgPerimetro">Perímetro: </label>
+    <span id="msgPerimetro"></span>
+</body>
+
+</html>
